@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Emercado Bolivia</title>
+    <link rel="stylesheet" href="css/google.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <section id="portada" class="portada background">
+        <!-- portada -->
+        <header id="header" class="header contenedor">
+            <!-- header -->
+            <figure class="logotipo">
+                <!-- logotipo -->
+                <a href="index.html"><img src="images/logo1.png" width="186" height="60" alt="Invie logotipo" /> </a>
+            </figure>
+            <span class="burger-button icon-menu" id="burger-button"></span>
+            <nav class="menu" id="menu">
+                <!-- menu -->
+                <ul>
+                    <li>
+                        <a href="index.html">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="#transporte">Transportadora</a>
+                    </li>
+                    <li>
+                        <a href="producto.html">Productos</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="contenedor">
+            <h1 class="titulo">Emercado <span>Bolivia</span> </h1>
+            <h3 class="title-a">Podes hacer Grandes cosas por Bolivia</h3>
+            <a class="button" href="#transporte">Conoce mas</a>
+        </div>
+    </section>
+    <section id="transporte" class="transportes contenedor">
+        <!-- transportes -->
+        <!-- <h2>Nuestra transportes</h2>titulo -->
+        <article class="transporte">
+            <!-- transporte 1 -->
+            <img class="derecha" data-src="images/vehiculo-articulado.jpg" alt="transporte Invie Acustica"
+                width="350" />
+            <div class="contenedor-transporte-a">
+                    <h3 class="title-b">Transporte Pesado</h3>
+                    <ol>
+                        <li>Capacidad 45 ton. de carga </li>
+                        <li>Destinos La Paz, Cochabamaba, Santa Cruz</li>
+                        <li>Mas Informacion Telefono <span>3024456678</span></li>
+                    </ol>
+            </div>
+        </article>
+        <article class="transporte b">
+            <!-- transporte 2 -->
+            <img class="izquierda" data-src="images/volqueta.png" alt="transporte Invie Classic" width="350" />
+            <div class="contenedor-transporte-b">
+                    <h3 class="title-b">Transporte Volqueta</h3>
+                    <ol>
+                        <li>Capacidad 20 ton de Carga</li>
+                        <li>Destinos La Paz, Cochabamaba,Santa Cruz</li>
+                        <li>Mas Informacion Telefono <span>3024456678</span></li>
+                    </ol>
+            </div>
+        </article>
+    </section>
+    <footer class="footer">
+        <div class="contenedor">
+            <div class="contacto">
+                    <img src="images/logo1.png" alt="logotipo footer">
+                    <a href=""><strong>Telefono</strong><span>74930776</span></a>
+                    <a href=""><strong>E-mail</strong>emercado@bolivia.com</a>
+            </div>
+            <form class="formulario">
+                <div class="col1">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" required id="nombre" name="nombre" />
+                    <label for="email">E-mail</label>
+                    <input type="email" required id="email" name="email" />
+                    <!-- <div class="sexo">
+                        <label for="mujer">
+                            <input type="radio" id="mujer" checked name="sexo" value="mujer"> mujer
+                        </label>
+                        <label for="hombre">
+                            <input type="radio" id="hombre" name="sexo" value="hombre"> hombre
+                        </label>
+                    </div> -->
+                    <!-- <div class="intereses">
+                        <label for="cotizacion">
+                            <input type="checkbox" checked id="cotizacion" name="intereses" value="cotizacion">
+                            Cotización
+                        </label>
+                        <label for="reclamos">
+                            <input type="checkbox" id="reclamos" name="intereses" value="reclamos"> Reclamos
+                        </label>
+                        <label for="comentarios">
+                            <input type="checkbox" id="comentarios" name="intereses" value="comantarios"> Comentarios
+                        </label>
+                        <label for="otros">
+                            <input type="checkbox" id="otros" name="intereses" value="otros"> Otros
+                        </label>
+                    </div> -->
+                </div>
+                <div class="col2">
+                    <label for="comentarios">Comentarios</label>
+                    <textarea name="comantarios" id="comentarios" cols="30" rows="7"></textarea>
+                    <input type="submit" value="Enviar" class="button" />
+                </div>
+            </form>
+        </div>
+    </footer>
+    <script src="js/hammer.min.js"></script>
+    <script src="js/blazy.min.js"></script>
+    <script>
+        var consulta = window.matchMedia('(max-width: 500px)');
+        consulta.addListener(mediaQuery);
+
+        var $burgerButton = document.getElementById('burger-button');
+        var $menu = document.getElementById('menu');
+        function toogleMenu() {
+            $menu.classList.toggle('active')
+        };
+        function showMenu() {
+            $menu.classList.add('active');
+        };
+        function hideMenu() {
+            $menu.classList.remove('active');
+        };
+
+        function mediaQuery() {
+            if (consulta.matches) {
+                console.log('se cumplio la condicion');
+                $burgerButton.addEventListener('touchstart', toogleMenu)
+
+            }
+            else {
+                $burgerButton.removeEventListener('touchstart', toogleMenu)
+                console.log('no se Cumplio la Condicion');
+            }
+        }
+        mediaQuery();
+
+        //blazy loading
+        var blazy = new Blazy({
+            selector: 'img'
+        });
+
+
+        var $body = document.body;
+
+        var gestos = new Hammer($body);
+        gestos.on('swipeleft', hideMenu);
+        gestos.on('swiperight', showMenu);
+
+        // $burgerButton.addEventListener('touchstart',toogleMenu)
+        // function toogleMenu(){
+        // $menu.classList.toggle('active')
+        // };
+    </script>
+</body>
+
+</html>

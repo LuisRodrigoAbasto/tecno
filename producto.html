@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Emercado Bolivia</title>
+    <link rel="stylesheet" href="css/google.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="producto">
+        <header id="header" class="header background"> <!-- header -->
+            <div class="contenedor">
+              <figure class="logotipo"> <!-- logotipo -->
+                <img src="images/logo1.png" width="186" height="60" alt="Invie logotipo"/>
+              </figure>
+              <span class="burger-button icon-menu" id="burger-button"></span>
+              <nav class="menu" id="menu"><!-- menu -->
+            <ul> <!--lista no ordenada-->
+                <li>
+                    <a href="index.html">Inicio</a>                    
+                </li>
+                <li>
+                    <a href="index.html#transporte">Transportadora</a>
+                </li>
+                <li>
+                    <a href="producto.html">Productos</a>
+                </li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+    <section class="tabla">
+        <div class="contenedor">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Descripcion</th>
+                        <th>Mas Informacion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Soya</td>
+                        <td>$10000</td>
+                        <td>20 ton de mac100</td>
+                        <td>749209232</td>
+                    </tr>
+                    <tr>
+                        <td>Maiz</td>
+                        <td>$50000</td>
+                        <td>100 ton de maiz Limpio y seco humedad 15°</td>
+                        <td>892389237293</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <footer class="footer">
+            <div class="contenedor">
+                <div class="contacto">
+                        <img src="images/logo1.png" alt="logotipo footer">
+                        <a href=""><strong>Telefono</strong><span>74930776</span></a>
+                        <a href=""><strong>E-mail</strong>emercado@bolivia.com</a>
+                </div>
+                <form class="formulario">
+                    <div class="col1">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" required id="nombre" name="nombre" />
+                        <label for="email">E-mail</label>
+                        <input type="email" required id="email" name="email" />
+                        <!-- <div class="sexo">
+                            <label for="mujer">
+                                <input type="radio" id="mujer" checked name="sexo" value="mujer"> mujer
+                            </label>
+                            <label for="hombre">
+                                <input type="radio" id="hombre" name="sexo" value="hombre"> hombre
+                            </label>
+                        </div> -->
+                        <!-- <div class="intereses">
+                            <label for="cotizacion">
+                                <input type="checkbox" checked id="cotizacion" name="intereses" value="cotizacion">
+                                Cotización
+                            </label>
+                            <label for="reclamos">
+                                <input type="checkbox" id="reclamos" name="intereses" value="reclamos"> Reclamos
+                            </label>
+                            <label for="comentarios">
+                                <input type="checkbox" id="comentarios" name="intereses" value="comantarios"> Comentarios
+                            </label>
+                            <label for="otros">
+                                <input type="checkbox" id="otros" name="intereses" value="otros"> Otros
+                            </label>
+                        </div> -->
+                    </div>
+                    <div class="col2">
+                        <label for="comentarios">Comentarios</label>
+                        <textarea name="comantarios" id="comentarios" cols="30" rows="7"></textarea>
+                        <input type="submit" value="Enviar" class="button" />
+                    </div>
+                </form>
+            </div>
+        </footer>
+</body>
+</html>
